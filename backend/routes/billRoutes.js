@@ -6,17 +6,22 @@ const router = express.Router();
 
 // Add bill
 router.post("/add", protect, async (req, res) => {
-  const { totalAmount, participants } = req.body;
+  try {
+    const { totalAmount, participants } = req.body;
 
-  const splitAmount = totalAmount / participants.length;
-  const bill = await Bill.create({
-    userId: req.user,
-    totalAmount,
-    participants: participants.map(id => ({ friendId: id, amountOwed: splitAmount }))
-  });
+    const bill = await Bill.create({
+      userId: req.user, 
+      totalAmount,
+      participants 
+    });
 
-  res.json(bill);
+    res.status(201).json(bill);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ msg: "Failed to create bill" });
+  }
 });
+
 
 // Get bills
 router.get("/", protect, async (req, res) => {
