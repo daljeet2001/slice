@@ -14,7 +14,7 @@ export default function Dashboard() {
 
 
   return (
-    <main className="max-w-6xl mx-auto px-4 py-8 flex flex-col gap-8  bg-white"
+    <main className="max-w-6xl mx-auto px-4  flex flex-col gap-8  bg-white"
     >
 
       <h1 className=" text-4xl font-chewy text-center">A quick guide to go from receipt to fair shares</h1>
