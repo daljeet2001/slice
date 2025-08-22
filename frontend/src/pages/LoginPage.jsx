@@ -43,7 +43,7 @@ const handleLogin = async (e) => {
 
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-zinc-900 p-4" >
+    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-zinc-900 p-4 font-chewy" >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -52,14 +52,14 @@ const handleLogin = async (e) => {
       >
         <Card className="shadow-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-2xl">
           <CardHeader className="text-center space-y-2">
-            <CardTitle className="text-3xl font-bebas font-bold">CAREIO</CardTitle>
-            <p className="text-sm text-gray-500 font-bebas dark:text-gray-400">
+            <CardTitle className="text-3xl font-chewy font-bold">SLICE</CardTitle>
+            <p className="text-sm text-gray-500 font-chewy dark:text-gray-400">
               Sign in to your account
             </p>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleLogin} className="space-y-6">
-              <div className="space-y-2 font-bebas">
+              <div className="space-y-2 font-chewy">
                 <Label htmlFor="email">Email</Label>
                 <Input
                   id="email"
@@ -72,7 +72,7 @@ const handleLogin = async (e) => {
                 />
               </div>
 
-              <div className="space-y-2 font-bebas">
+              <div className="space-y-2 font-chewy">
                 <Label htmlFor="password">Password</Label>
                 <Input
                   id="password"
@@ -91,7 +91,7 @@ const handleLogin = async (e) => {
 
               <Button
                 type="submit"
-                className="w-full font-medium rounded-lg font-bebas bg-black text-white hover:bg-gray-800 transition-colors"
+                className="w-full font-medium rounded-lg font-chewy bg-black text-white hover:bg-gray-800 transition-colors"
                 disabled={loading}
               >
                 {loading ? (
@@ -105,7 +105,7 @@ const handleLogin = async (e) => {
               </Button>
 
               {/* Divider */}
-              <div className="relative flex items-center justify-center font-bebas">
+              <div className="relative flex items-center justify-center font-chewy">
                 <span className="h-px w-full bg-gray-200 dark:bg-gray-700"></span>
                 <span className="absolute bg-white dark:bg-gray-900 px-2 text-sm text-gray-500 dark:text-gray-400">
                   OR
@@ -114,7 +114,7 @@ const handleLogin = async (e) => {
             </form>
 
             {/* Footer */}
-            <p className="mt-6 text-center text-sm text-gray-500 dark:text-gray-400 font-bebas">
+            <p className="mt-6 text-center text-sm text-gray-500 dark:text-gray-400 font-chewy">
               Don’t have an account?{" "}
               <Link
                 to="/signup"

@@ -4,11 +4,12 @@ import api from "../api";
 
 export default function SplitCard({ total, friends }) {
   const [mode, setMode] = useState("equal"); // 'equal' | 'custom'
-    const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [custom, setCustom] = useState(() =>
     Object.fromEntries(friends.map(f => [f._id, 0]))
   );
+
 
   // Sync custom state if friends change
 useEffect(() => {
@@ -52,7 +53,7 @@ console.log("Bill body:", body);
       });
 
       console.log("Bill created:", data);
-      alert("Bill created successfully!");
+
     } catch (err) {
       console.error("Failed to create bill:", err);
       setError(err.response?.data?.msg || "Failed to create bill");
@@ -74,13 +75,13 @@ console.log("Bill body:", body);
   const remaining = (Number(total || 0) - Number(customTotal)).toFixed(2);
 
   return (
-    <div className="bg-white p-4 rounded-2xl shadow-sm">
-      <h2 className="text-lg font-semibold">3) Bill</h2>
+    <div className=" p-4 text-center font-chewy">
+    <h2 className="text-xl font-semibold mb-4">Step 3: Split</h2>
       <p className="text-sm text-gray-600 mt-1">
         Total detected: <b>${Number(total||0).toFixed(2)}</b>
       </p>
 
-      <div className="mt-3 flex gap-2">
+      <div className="mt-3 flex gap-2 justify-center">
         <button
           onClick={()=>setMode("equal")}
           className={`px-3 py-1 rounded-xl border ${mode==="equal"?"bg-blue-600 text-white border-blue-600":"bg-white"}`}
@@ -96,6 +97,7 @@ console.log("Bill body:", body);
         <ul className="mt-3 space-y-2">
           {friends.map((f, i) => (
             <li key={f.id} className="flex items-center justify-between bg-gray-50 rounded-xl px-3 py-2">
+              
               <span>{f.name}</span>
               <span>${equalShares[i]?.toFixed(2) ?? "0.00"}</span>
             </li>
@@ -130,17 +132,22 @@ console.log("Bill body:", body);
     </div>
     <div className={`flex items-center justify-between ${Number(remaining)===0?'text-green-600':'text-amber-600'} mt-1 text-sm`}>
       <span>Remaining to assign</span>
-      <b>${remaining}</b>     
+      <b>${remaining}</b> 
+
     </div>
 
   </div>
 )}
      <button
         onClick={createBill}
-        className="bg-black text-white rounded-md p-2 mt-4 cursor-progress"
-        disabled={loading}
+        className={`rounded-md p-2 mt-4  
+    ${loading || (mode === "custom" && Number(remaining) !== 0) 
+      ? "bg-gray-400 text-white cursor-not-allowed" 
+      : "bg-black text-white hover:bg-gray-900"}`}
+  disabled={loading || (mode === "custom" && Number(remaining) !== 0)}
       >
         {loading ? "Creating..." : "Create"}
+
       </button>
 
     </div>

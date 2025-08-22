@@ -47,7 +47,7 @@ const handleSignup = async (e) => {
 
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 p-4 font-bebas">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 p-4 font-chewy">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ const handleSignup = async (e) => {
       >
         <Card className="shadow-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-2xl">
           <CardHeader className="text-center space-y-2">
-            <CardTitle className="text-3xl font-bold">CAREIO</CardTitle>
+            <CardTitle className="text-3xl font-bold">SLICE</CardTitle>
             <p className="text-sm text-gray-500 dark:text-gray-400">
               Sign up to get started
             </p>
@@ -108,7 +108,7 @@ const handleSignup = async (e) => {
 
               <Button
                 type="submit"
-                className="w-full font-medium rounded-lg font-bebas bg-black text-white hover:bg-gray-800 transition-colors"
+                className="w-full font-medium rounded-lg font-chewy bg-black text-white hover:bg-gray-800 transition-colors"
                 disabled={loading}
               >
                 {loading ? (

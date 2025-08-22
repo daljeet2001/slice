@@ -1,17 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
 
 @import "tailwindcss";
 
 
-
 @theme {
-  --font-bebas: "Bebas Neue", sans-serif;
+  --font-chewy: "Chewy", cursive;
 }
 
+
 @theme {
-  --font-wdxl: "WDXL Lubrifont TC", sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
 }
+
+
+
 
 
 
@@ -84,7 +88,7 @@
 
 :root {
   /* --radius: 1.25rem; */
-  --background: oklch(0.9232 0.0026 48.7171);
+  /* --background:white; */
   --foreground: oklch(0.2795 0.0368 260.0310);
   --card: oklch(0.9699 0.0013 106.4238);
   --card-foreground: oklch(0.2795 0.0368 260.0310);
@@ -138,8 +142,8 @@
   --tracking-normal: 0em;
 }
 
-.dark {
-  --background: oklch(0.2244 0.0074 67.4370);
+/* .dark {
+  --background:white;
   --foreground: oklch(0.9288 0.0126 255.5078);
   --card: oklch(0.2801 0.0080 59.3379);
   --card-foreground: oklch(0.9288 0.0126 255.5078);
@@ -191,14 +195,5 @@
   --shadow-lg: 2px 2px 10px 4px hsl(0 0% 0% / 0.18), 2px 4px 6px 3px hsl(0 0% 0% / 0.18);
   --shadow-xl: 2px 2px 10px 4px hsl(0 0% 0% / 0.18), 2px 8px 10px 3px hsl(0 0% 0% / 0.18);
   --shadow-2xl: 2px 2px 10px 4px hsl(0 0% 0% / 0.45);
-}
+} */
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-    letter-spacing: var(--tracking-normal);
-  }
-}

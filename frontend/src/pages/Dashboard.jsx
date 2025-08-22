@@ -14,16 +14,21 @@ export default function Dashboard() {
 
 
   return (
-    <main className="max-w-6xl mx-auto px-4 py-8 grid md:grid-cols-2 gap-6">
+    <main className="max-w-6xl mx-auto px-4 py-8 flex flex-col gap-8 "
+    >
+
+      <h1 className=" text-4xl font-chewy text-center">A quick guide to go from receipt to fair shares</h1>
       <UploadCard onTotalDetected={setTotal} onRawText={setRawText} />
 
       <div className="space-y-6">
         <FriendsCard friends={friends} setFriends={setFriends} setSelected={setSelectedFriends} selected={selectedfriends} />
-        <Bills />
+    
        
 
     
        <SplitCard total={total} friends={selectedfriends} />
+
+           <Bills />
       </div>
 
       {/* Optional raw text viewer */}
