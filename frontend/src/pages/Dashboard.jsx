@@ -14,10 +14,10 @@ export default function Dashboard() {
 
 
   return (
-    <main className="max-w-6xl mx-auto px-4  flex flex-col gap-8  bg-white"
+    <main className="  flex flex-col gap-8  bg-white"
     >
 
-      <h1 className=" text-4xl font-chewy text-center">A quick guide to go from receipt to fair shares</h1>
+      <h1 className=" text-4xl font-chewy text-center pt-4">A quick guide to go from receipt to fair shares</h1>
       <UploadCard onTotalDetected={setTotal} onRawText={setRawText} />
 
       <div className="space-y-6">

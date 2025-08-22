@@ -15,9 +15,9 @@ export default function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
-
+ <Route path="/dashboard" element={<Dashboard />} />
         <Route element={<ProtectedRoute />}> 
-              <Route path="/dashboard" element={<Dashboard />} />
+             
         </Route>
       </Routes>
       <Footer />
