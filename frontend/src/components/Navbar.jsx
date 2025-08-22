@@ -14,7 +14,7 @@ export default function Navbar() {
   }, [navigate]);
 
   return (
-    <header className="">
+    <header className="bg-white">
       <div className="  px-4 py-3 flex items-center justify-between font-chewy">
         {/* Logo */}
         <Link to="/" className="text-2xl font-heading text-black">SLICE</Link>

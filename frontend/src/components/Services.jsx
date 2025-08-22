@@ -2,7 +2,7 @@
 
 export default function Services() {
   return (
-    <section className=" py-2 px-6 mb-24 text-center font-chewy">
+    <section className=" py-2 px-6 pb-24 text-center font-chewy">
       {/* Top small heading */}
       <p className="text-sm font-semibold  tracking-wide mb-2">
         How slice works

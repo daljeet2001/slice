@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className=" text-black font-chewy py-6 px-4" >
+    <footer className=" text-black bg-white font-chewy py-6 px-4" >
       <div className="text-center">
       
         

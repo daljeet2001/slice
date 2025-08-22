@@ -47,7 +47,7 @@ const handleSignup = async (e) => {
 
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 p-4 font-chewy">
+    <div className="min-h-screen  bg-white flex items-center justify-center p-4 font-chewy">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
